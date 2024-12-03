@@ -174,3 +174,56 @@ h1 {
   height: 15px;
   position: absolute;
 }
+
+/* Ghost styling */
+#ghost {
+  position: fixed;
+  bottom: 20%;
+  right: 10%;
+  width: 50px;
+  height: 80px;
+  border-radius: 50% 50% 0 0;
+  border: 2px solid black;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  z-index: 100;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+#ghost:hover {
+  transform: scale(1.2); /* Grow slightly on hover */
+}
+
+/* Ghost's secret message */
+.message {
+  display: none;
+  position: absolute;
+  bottom: 110%; /* Position above the ghost */
+  left: 50%; /* Center the message */
+  transform: translateX(-50%); /* Ensure it’s centered */
+  background: black;
+  color: white;
+  padding: 15px; /* Increase padding for more space inside the box */
+  border-radius: 10px; /* Round corners */
+  font-size: 0.8rem;
+  text-align: center;
+  white-space: normal; /* Allow text to wrap */
+  max-width: 250px; /* Limit the width of the message */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  width:max-content; /* Let the width adjust based on the content */
+  height: auto;
+}
+
+/* Ghost image size */
+.ghost-icon {
+  width: 120px; /* Adjust the size of the ghost image */
+  height: auto; /* Keep aspect ratio */
+  display: block; /* Make sure it's treated as a block element */
+  margin: 0 auto; /* Center it */
+}
+
+/* Show the message on hover */
+#ghost:hover .message {
+  display: block;
+}
