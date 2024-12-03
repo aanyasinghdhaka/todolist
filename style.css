@@ -62,8 +62,9 @@ h1 {
 
 #taskInput:focus {
   border-color: #a90000;
-  box-shadow: 0 0 20px #000000;
+  box-shadow: 0 0 20px #e12727;
 }
+
 
 #addButton {
   background-color: #ffdc18;
