@@ -8,6 +8,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+
 }
 
 #background-video {
@@ -47,7 +48,7 @@ h1 {
 #taskInput {
   padding: 10px;
   font-size: 1rem;
-  border: 2px solid #ff7518;
+  border: 2px solid #7e0000;
   border-radius: 10px;
   outline: none;
   background: #2d2d2d;
@@ -55,16 +56,18 @@ h1 {
   transition: 0.3s;
   margin-top: 100px;
   margin-bottom: 20px;
+  font-family: "Special Elite", serif;
+  
 }
 
 #taskInput:focus {
-  border-color: #d35400;
-  box-shadow: 0 0 10px #d35400;
+  border-color: #a90000;
+  box-shadow: 0 0 20px #000000;
 }
 
 #addButton {
-  background-color: #ff7518;
-  color: white;
+  background-color: #ffdc18;
+  color: rgb(5, 5, 5);
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
@@ -72,12 +75,13 @@ h1 {
   cursor: pointer;
   margin-left: 10px;
   transition: 0.3s;
+  font-family: "Special Elite", serif;
 }
 
 #addButton:hover {
-  background-color: #d35400;
+  background-color: #d8a600;
   transform: scale(1.1);
-  box-shadow: 0 0 15px #ff7518;
+  box-shadow: 0 0 15px #fbff09;
 }
 
 /* Task List Styling */
@@ -99,24 +103,25 @@ h1 {
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: 0.3s;
-  color: #ff7518;
-  font-family: 'Creepster', cursive;
+  color: #d8a600;
+  font-family: "Special Elite", serif;
 }
 
 #taskList li:hover {
   background: #444444;
   transform: scale(1.05);
-  box-shadow: 0 0 20px #ff7518;
+  box-shadow: 0 0 20px #950202;
 }
 
 #taskList li button {
-  background-color: #ff0000;
+  background-color: #790202;
   border: none;
   color: white;
   padding: 5px 10px;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
+  font-family: "Special Elite", serif;
 }
 
 #taskList li button:hover {
