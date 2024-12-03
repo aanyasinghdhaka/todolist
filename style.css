@@ -1,6 +1,6 @@
 /* Overall Page Styling */
 body {
-  font-family: 'Creepster', cursive; /* Spooky font */
+  
   background: linear-gradient(120deg, #1b1b1b, #3c3c3c);
   color: #f8f8f8;
   display: flex;
@@ -23,13 +23,14 @@ body {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 70px;
   color: #ff7518; /* Pumpkin orange */
   text-shadow: 3px 3px 5px #000000;
   margin-bottom: 20px;
   animation: flicker 2s infinite alternate;
   -webkit-text-fill-color: white;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 0.01px rgb(0, 0, 0);
+  font-family: "Henny Penny";
 }
 
 /* Flicker Effect */
@@ -128,29 +129,35 @@ h1 {
   background: rgba(0, 0, 0, 0.7); /* Translucent black background */
   color: #ff7518; /* Pumpkin orange */
   text-align: center;
-  padding: 20px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   border-bottom-left-radius: 50% 20px;
   border-bottom-right-radius: 50% 20px;
   z-index: 1;
 }
 
-.topframe h1 {
-  margin: 0;
-  font-size: 3rem;
-  font-family: 'Creepster', cursive;
-}
 
+/* Container for both eyes */
 #eyes {
   position: fixed;
-  width: 100px;
+  width: 50%;
   height: 50px;
   left: 50%;
-  top: 20%;
+  top: 10.3%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: space-between;
+
   z-index: 100; /* Ensure it appears above everything */
+}
+
+#eye1 {
+  left: 33%;
+  top: 70%;
+}
+
+#eye2{
+  left: 43.4%;
+  top: 70%;
+
 }
 
 /* Each eye */
@@ -158,7 +165,7 @@ h1 {
   background: white;
   border: 2px solid black;
   border-radius: 50%;
-  width: 40px;
+  width: 34px;
   height: 40px;
   position: relative;
   display: flex;
@@ -213,6 +220,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
   width:max-content; /* Let the width adjust based on the content */
   height: auto;
+  font-family: "Special Elite", serif;
 }
 
 /* Ghost image size */
