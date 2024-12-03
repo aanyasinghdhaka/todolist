@@ -1,0 +1,142 @@
+/* Overall Page Styling */
+body {
+  font-family: 'Creepster', cursive; /* Spooky font */
+  background: linear-gradient(120deg, #1b1b1b, #3c3c3c);
+  color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #ff7518; /* Pumpkin orange */
+  text-shadow: 3px 3px 5px #000000;
+  margin-bottom: 20px;
+  animation: flicker 2s infinite alternate;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 3px black;
+}
+
+/* Flicker Effect */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 3px 3px 5px #000000;
+  }
+  20%, 24%, 55% {
+    text-shadow: 3px 3px 15px #ff7518;
+  }
+}
+
+/* Input and Button Styling */
+#taskInput {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ff7518;
+  border-radius: 10px;
+  outline: none;
+  background: #2d2d2d;
+  color: #fff;
+  transition: 0.3s;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+#taskInput:focus {
+  border-color: #d35400;
+  box-shadow: 0 0 10px #d35400;
+}
+
+#addButton {
+  background-color: #ff7518;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+#addButton:hover {
+  background-color: #d35400;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff7518;
+}
+
+/* Task List Styling */
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 400px;
+}
+
+#taskList li {
+  background: #2d2d2d;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  color: #ff7518;
+  font-family: 'Creepster', cursive;
+}
+
+#taskList li:hover {
+  background: #444444;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff7518;
+}
+
+#taskList li button {
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#taskList li button:hover {
+  background-color: #ff4040;
+  transform: rotate(20deg);
+}
+.topframe {
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Translucent black background */
+  color: #ff7518; /* Pumpkin orange */
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 50% 20px;
+  border-bottom-right-radius: 50% 20px;
+  z-index: 1;
+}
+
+.topframe h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-family: 'Creepster', cursive;
+}
