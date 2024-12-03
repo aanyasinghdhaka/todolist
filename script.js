@@ -38,4 +38,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const pupils = document.querySelectorAll('.pupil');
+  
+    document.addEventListener('mousemove', (event) => {
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+  
+      pupils.forEach((pupil) => {
+        // Get the pupil's parent eye position
+        const eyeRect = pupil.parentElement.getBoundingClientRect();
+        const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+        const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+  
+        // Calculate the angle between the cursor and the eye center
+        const angle = Math.atan2(mouseY - eyeCenterY, mouseX - eyeCenterX);
+  
+        // Move the pupil within the eye, constrained to its boundaries
+        const pupilOffset = 10; // Adjust to ensure the pupil stays within the eye
+        const pupilX = Math.cos(angle) * pupilOffset;
+        const pupilY = Math.sin(angle) * pupilOffset;
+  
+        pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+      });
+    });
+  });
+  
   
